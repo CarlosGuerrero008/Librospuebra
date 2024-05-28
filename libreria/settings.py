@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kbuimw*udwmp5_^e&8eq!m3ke)yf#utpjmclqma48m!p)b=s%y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['prueba.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['puebra.azurewebsites.net', '127.0.0.1']
 
 
 # Application definition
@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'inventtario',  # Ensure this matches the actual directory name
+    'inventtario',  
     'rest_framework',     
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,15 +120,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'inventtario', 'static'),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 # Default primary key field type
@@ -134,5 +129,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'signin'
-LOGIN_REDIRECT_URL = 'home'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'inventtario', 'static'),
+]
+
+
+
+
+
+
+
+
+
